@@ -213,3 +213,29 @@ discountsToApply.reduce(applyDiscount, totalBill) //=> 47.01
 
 ## But wait, there's more!
 If these aren't doing the trick for you, check out the documentation for the collection type you are working with and see if any of the other built in methods can help out!
+
+***
+
+# Exercises
+1. **Create a ternary that correctly returns a pluralised string** \
+Create a program that takes two variables, “item” which is equal to the name of an item and “count” which is equal to the number of items I have. Create a ternary statement that returns a sentence as such ‘I have <count> <item>’’. However the word count and item should be replaced by the values in the variables and item should have a s on the end if there is more than one item.
+  
+2. **Patterns** \
+Write a program that returns a string where every other character is a & followed by a blank space. Print out this string so that it forms a 10 x 10 grid which would look similar to this:
+&   &   &   &   &   
+  &  &  &  &  &
+&   &   &   &   &   
+  &  &  &  &  &
+&   &   &   &   &   
+  &  &  &  &  &
+&   &   &   &   &   
+  &  &  &  &  &
+&   &   &   &   &   
+  &  &  &  &  &
+
+3. **Pass the tests** \
+- Fork and clone this repo
+- cd into the repo folder with `cd fp_study_notes_data_in_JavaScript`
+- Install dependencies with `npm install`
+- Run the test suite with `npm test`
+- Make changes to `main.js` until all tests are passing
