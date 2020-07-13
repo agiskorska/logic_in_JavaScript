@@ -1,0 +1,25 @@
+{
+  "name": "logic-in-js",
+  "version": "1.0.0",
+  "description": "Notes and repo for Logic in JavaScript lecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --reporter=nyan --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getfutureproof/fp_study_notes_logic_in_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getfutureproof/fp_study_notes_logic_in_JavaScript/issues"
+  },
+  "homepage": "https://github.com/getfutureproof/fp_study_notes_logic_in_JavaScript#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rewire": "^5.0.0"
+  }
+}
