@@ -234,7 +234,7 @@ Write a program that returns a string where every other character is a & followe
 
 3. **Pass the tests**
 - Fork and clone this repo
-- cd into the repo folder with `cd fp_study_notes_data_in_JavaScript`
+- cd into the repo folder with `cd fp_study_notes_logic_in_JavaScript`
 - Install dependencies with `npm install`
 - Run the test suite with `npm test`
 - Make changes to `main.js` until all tests are passing
