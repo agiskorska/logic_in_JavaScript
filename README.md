@@ -105,13 +105,13 @@ We can consider the default case to be akin to the else statement in an if state
 When we want to repeat a specific action until a condition is met, we can use a loop.
 
 ### While Loop
-Consider this code. How many times will the loop run? Note the placement of the condition (`number <= 18`) and that if the condition is met, the code inside the curly braces `{ }` will get executed.
+Consider this code. How many times will the loop run? Note the placement of the condition (`number >= 1 && number < 18`) and that if the condition is met, the code inside the curly braces `{ }` will get executed.
 ```js
 let number = 0;
 
-while (number <= 18) {
-  console.log(number);
-  number = number + 3;
+while (number >= 1 && number < 18) {
+    console.log(`The num is ${number}`)
+    number++
 }
 ```
 
@@ -120,13 +120,10 @@ The do loop is similar to a while loop, the only difference being that it is alw
 If the condition of a while loop is never true, it will never be executed. \
 Note the placement of the conditional ***after*** the block of code.
 ```js
-let name;
-
 do {
-  name = prompt("What shall I call you?");
-} while (!name);
-
-console.log(name);
+    console.log(`The num is ${number}`)
+    number++;
+} while (number >= 1 && number < 18);
 ```
 
 ### For Loop
