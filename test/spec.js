@@ -1,54 +1,55 @@
-'use strict';
-const expect = require('chai').expect;
-const rewire = require('rewire');
-
-let main = rewire('../main')
+const funcs = require("../main");
 
 let humans = [
-    { name: "Beti", age: 32 },
-    { name: "Aki", age: 29 },
     { name: "Elowen", age: 8 },
-    { name: "Artemis", age: 12 }
-]
+    { name: "Artemis", age: 12 },
+    { name: "Trifun", age: 16 },
+    { name: "Beti", age: 33 },
+    { name: "Aki", age: 30 }
+];
 
-describe('ageCheck', function() {
-    let ageCheck = main.__get__('ageCheck');
-    let humans = [
-        { name: "Beti", age: 32 },
-        { name: "Aki", age: 29 },
-        { name: "Elowen", age: 8 },
-        { name: "Artemis", age: 12 }
-    ]
+describe('ageCheck', function(){
+    let ageCheck = funcs.ageCheck;
+
+    it('checks to see if any people are under 18', () => {
+        expect(ageCheck(humans)).toEqual(true);
+    })
+})
+
+describe('over18s', function() {
+    let over18s = funcs.over18s;
 
     it('returns an array', () => {
-        expect(ageCheck(humans)).to.be.a('array');
+        expect(over18s(humans)).toBeInstanceOf(Array);
     });
 
     it('returns an array that includes the people who are over 18', () => {
-        expect(ageCheck(humans)[1].name).to.equal("Aki");
+        let result = over18s(humans);
+        expect(result).toHaveLength(2);
+        expect(result[1].name).toEqual("Aki");
     });
 });
 
-describe('namesPlease', function() {
-    let namesPlease = main.__get__('namesPlease');
-
+describe('crecheRoster', function() {
+    let crecheRoster = funcs.crecheRoster;
     it('returns an array', () => {
-        expect(namesPlease(humans)).to.be.a('array');
+        expect(crecheRoster(humans)).toBeInstanceOf(Array);
     });
 
-    it('returns an array that includes the names of the people who are over 18', () => {
-        expect(namesPlease(humans)[0]).to.equal("Beti");
+    it('returns an array that includes the names of the people who are under 12 or under', () => {
+        expect(crecheRoster(humans)).toHaveLength(2)
+        expect(crecheRoster(humans)[0]).toEqual("Elowen");
     });
 });
 
 describe('cumulativeAge', function() {
-    let cumulativeAge = main.__get__('cumulativeAge');
+    let cumulativeAge = funcs.cumulativeAge;
 
     it('returns a number', () => {
-        expect(cumulativeAge(humans)).to.be.a('number');
+        expect(cumulativeAge(humans)).toEqual(expect.any(Number));
     });
 
     it('returns the combined age of all the humans', () => {
-        expect(cumulativeAge(humans)).to.equal(81);
+        expect(cumulativeAge(humans)).toEqual(99);
     });
 });
