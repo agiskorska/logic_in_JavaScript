@@ -2,9 +2,9 @@
   "name": "logic-in-js",
   "version": "1.0.0",
   "description": "Notes and repo for Logic in JavaScript lecture",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "coverage": "jest --coverage"
   },
   "repository": {
