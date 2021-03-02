@@ -36,7 +36,7 @@ describe('crecheRoster', function() {
         expect(crecheRoster(humans)).toBeInstanceOf(Array);
     });
 
-    it('returns an array that includes the names of the people who are under 12 or under', () => {
+    it('returns an array that includes the names of the people who are 12 or under', () => {
         expect(crecheRoster(humans)).toHaveLength(2)
         expect(crecheRoster(humans)[0]).toEqual("Elowen");
     });
