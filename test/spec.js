@@ -1,4 +1,4 @@
-const funcs = require("../main");
+const { ageCheck, over18s, crecheRoster, cumulativeAge } = require("../main");
 
 let humans = [
     { name: "Elowen", age: 8 },
@@ -9,7 +9,6 @@ let humans = [
 ];
 
 describe('ageCheck', function(){
-    let ageCheck = funcs.ageCheck;
 
     it('checks to see if any people are under 18', () => {
         expect(ageCheck(humans)).toEqual(true);
@@ -17,7 +16,6 @@ describe('ageCheck', function(){
 })
 
 describe('over18s', function() {
-    let over18s = funcs.over18s;
 
     it('returns an array', () => {
         expect(over18s(humans)).toBeInstanceOf(Array);
@@ -31,7 +29,6 @@ describe('over18s', function() {
 });
 
 describe('crecheRoster', function() {
-    let crecheRoster = funcs.crecheRoster;
     it('returns an array', () => {
         expect(crecheRoster(humans)).toBeInstanceOf(Array);
     });
@@ -43,7 +40,6 @@ describe('crecheRoster', function() {
 });
 
 describe('cumulativeAge', function() {
-    let cumulativeAge = funcs.cumulativeAge;
 
     it('returns a number', () => {
         expect(cumulativeAge(humans)).toEqual(expect.any(Number));
